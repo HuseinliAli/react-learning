@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import UseStateComponent from "./States/UseStateComponent";
+import Counter from "./States/Counter";
 
 function App() {
   return (
     <div className="App">
-      <UseStateComponent />
+      <Counter />
     </div>
   );
 }
