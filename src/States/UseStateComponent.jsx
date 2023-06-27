@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const UseStateComponent = () => {
   const [name, setName] = useState("ali");
   const [friends, setFriends] = useState(["riko", "amuko", "makolo"]);
+  const [address, setAddress] = useState({ country: "aze", city: "baku" });
   return (
     <div>
       <h1>{name}</h1>
@@ -16,6 +17,19 @@ const UseStateComponent = () => {
       ))}
       <button onClick={() => setFriends([...friends, "nikolo"])}>
         add friend
+      </button>
+      <br />
+      <br />
+      <br />
+      <p>country: {address.country}</p>
+      <p>city: {address.city}</p>
+      <button
+        onClick={() => setAddress({ country: address.country, city: "gence" })}
+      >
+        change location 1
+      </button>
+      <button onClick={() => setAddress({ ...address, city: "lenkeran" })}>
+        change location 2
       </button>
     </div>
   );
