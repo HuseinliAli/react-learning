@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import ComponentUnmount from "./ComponentLifecycle/ComponentUnmount";
+import Posts from "./Fetching/Posts";
 
 function App() {
-  const [visible, setVisible] = useState(true);
+  // const [visible, setVisible] = useState(true);
 
   return (
     <div className="App">
-      {visible && <ComponentUnmount />}
+      <Posts />
+      {/* {visible && <ComponentUnmount />}
       <button
         onClick={() => {
           setVisible(false);
@@ -21,7 +22,7 @@ function App() {
         }}
       >
         show counter
-      </button>
+      </button> */}
     </div>
   );
 }
