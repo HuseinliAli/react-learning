@@ -1,15 +1,20 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((data) => {
-        setPosts(data);
-        setIsLoading(false);
-      });
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     setPosts(data);
+    //     setIsLoading(false);
+    //   });
+    axios("https://jsonplaceholder.typicode.com/posts").then((response) => {
+      setPosts(response.data);
+      setIsLoading(false);
+    });
   });
   return (
     <div className="d-flex justify-content-center container mt-4 mb-4">
