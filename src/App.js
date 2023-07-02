@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import Posts from "./Fetching/Posts";
+import Nav from "./ReactRouter/Nav";
 
 function App() {
   // const [visible, setVisible] = useState(true);
 
   return (
     <div className="App">
-      <Posts />
+      <Nav />
+      {/* <Posts /> */}
       {/* {visible && <ComponentUnmount />}
       <button
         onClick={() => {
