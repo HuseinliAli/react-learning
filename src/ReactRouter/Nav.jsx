@@ -2,6 +2,8 @@ import React from "react";
 import About from "./About";
 import Home from "./Home";
 import Contact from "./Contact";
+import Users from "./Users";
+import User from "./User";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 const Nav = () => {
   return (
@@ -10,17 +12,22 @@ const Nav = () => {
         <ul className="navbar-nav ">
           <li className="navbar-nav-item">
             <Link className="nav-link" to="/">
-              <Home />
+              Home
             </Link>
           </li>
           <li className="navbar-nav-item">
             <Link className="nav-link" to="/about">
-              <About />
+              About
+            </Link>
+          </li>
+          <li className="navbar-nav-item">
+            <Link className="nav-link" to="/users">
+              Users
             </Link>
           </li>
           <li className="navbar-nav-item">
             <Link className="nav-link" to="/contact">
-              <Contact />
+              Contact
             </Link>
           </li>
         </ul>
@@ -29,6 +36,8 @@ const Nav = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/users/" element={<Users />} />
+        <Route path="/users/:id" element={<User />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
