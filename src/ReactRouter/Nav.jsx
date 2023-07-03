@@ -4,6 +4,7 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Users from "./Users";
 import User from "./User";
+import PageNotFound from "./PageNotFound";
 import "./nav.module.css";
 import {
   BrowserRouter as Router,
@@ -66,6 +67,7 @@ const Nav = () => {
         <Route path="/users/" element={<Users />} />
         <Route path="/users/:id" element={<User />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );
