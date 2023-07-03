@@ -1,0 +1,16 @@
+a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #8e8e8e;
+}
+a:hover {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.active {
+  color: #fff !important;
+}
+.pending {
+  color: #8e8e8e;
+}

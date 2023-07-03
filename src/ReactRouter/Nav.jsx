@@ -4,31 +4,58 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Users from "./Users";
 import User from "./User";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import "./nav.module.css";
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Routes,
+  NavLink,
+} from "react-router-dom";
 const Nav = () => {
   return (
     <Router>
       <nav className="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-center">
         <ul className="navbar-nav ">
           <li className="navbar-nav-item">
-            <Link className="nav-link" to="/">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+              to="/"
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-nav-item">
-            <Link className="nav-link" to="/about">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+              to="/about"
+            >
               About
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-nav-item">
-            <Link className="nav-link" to="/users">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+              to="/users"
+            >
               Users
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-nav-item">
-            <Link className="nav-link" to="/contact">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+              to="/contact"
+            >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -9,17 +9,15 @@ const Users = () => {
     axios("https://jsonplaceholder.typicode.com/users")
       .then((response) => setUsers(response.data))
       .finally(() => {
-        wait(5000).then(() => {
-          setLoading(false);
-        });
+        setLoading(false);
       });
-  });
+  }, []);
 
   return (
     <div>
       {loading && (
-        <div class="spinner-border text-dark " role="status">
-          <span class="sr-only">Loading...</span>
+        <div className="spinner-border text-dark " role="status">
+          <span className="sr-only">Loading...</span>
         </div>
       )}
       {
