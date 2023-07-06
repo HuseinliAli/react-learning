@@ -13,7 +13,12 @@ import {
   Routes,
   NavLink,
 } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const Nav = () => {
+  const { t, i18n } = useTranslation();
+  const clickHandle = async (language) => {
+    await i18n.changeLanguage(language);
+  };
   return (
     <Router>
       <nav className="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-center">
@@ -25,7 +30,7 @@ const Nav = () => {
               }
               to="/"
             >
-              Home
+              {t("home.nav")}
             </NavLink>
           </li>
           <li className="navbar-nav-item">
@@ -35,7 +40,7 @@ const Nav = () => {
               }
               to="/about"
             >
-              About
+              {t("about")}
             </NavLink>
           </li>
           <li className="navbar-nav-item">
@@ -45,7 +50,7 @@ const Nav = () => {
               }
               to="/users"
             >
-              Users
+              {t("users")}
             </NavLink>
           </li>
           <li className="navbar-nav-item">
@@ -55,14 +60,19 @@ const Nav = () => {
               }
               to="/contact"
             >
-              Contact
+              {t("contact")}
             </NavLink>
           </li>
+          <button onClick={() => clickHandle("aze")}>Aze</button>
+          <button onClick={() => clickHandle("en")}>En</button>
         </ul>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home nav={t("home.nav")} header={t("home.header")} />}
+        />
         <Route path="/about" element={<About />} />
         <Route path="/users/" element={<Users />} />
         <Route path="/users/:id" element={<User />} />
