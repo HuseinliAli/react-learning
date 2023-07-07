@@ -1,0 +1,15 @@
+.animation-center {
+  position: relative;
+  height: 100vh;
+  background-color: rgb(21, 19, 33) !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.framer-studio-div,
+.logo-div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

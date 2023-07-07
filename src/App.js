@@ -5,14 +5,17 @@ import Nav from "./ReactRouter/Nav";
 import FormControl from "./Formik/FormControl";
 import SelectLanguage from "./languages-test/SelectLanguage";
 import Home from "./ReactRouter/Home";
-
+import FramerMotion from "./FramerMotion/FramerMotion";
+import { motion } from "framer-motion";
 function App() {
   // const [visible, setVisible] = useState(true);
 
   return (
-    <div className="App">
-      <Nav />
-      <Home />
+    <motion.div className="App">
+      <FramerMotion />
+      {/* <Nav />
+      <Home /> */}
+
       {/* <FormControl/> */}
       {/* <Nav /> */}
       {/* <Posts /> */}
@@ -31,7 +34,7 @@ function App() {
       >
         show counter
       </button> */}
-    </div>
+    </motion.div>
   );
 }
 
