@@ -1,5 +1,5 @@
 .animation-center {
-  position: relative;
+  position: absolute;
   height: 100vh;
   background-color: rgb(21, 19, 33) !important;
   justify-content: center;

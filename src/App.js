@@ -13,6 +13,7 @@ function App() {
   return (
     <motion.div className="App">
       <FramerMotion />
+      <Home />
       {/* <Nav />
       <Home /> */}
 

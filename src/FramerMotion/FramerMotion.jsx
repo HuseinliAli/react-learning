@@ -4,7 +4,12 @@ import "./framer.css";
 import { motion } from "framer-motion";
 const FramerMotion = () => {
   return (
-    <motion.div className="animation-center">
+    <motion.div
+      initial={{ y: [0] }}
+      transition={{ delay: 7, duration: 0.5 }}
+      animate={{ y: [0, -721] }}
+      className="animation-center"
+    >
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
