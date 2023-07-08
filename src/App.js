@@ -7,6 +7,7 @@ import SelectLanguage from "./languages-test/SelectLanguage";
 import Home from "./ReactRouter/Home";
 import FramerMotion from "./FramerMotion/FramerMotion";
 import { motion } from "framer-motion";
+import "./assets/index.scss";
 function App() {
   // const [visible, setVisible] = useState(true);
 
