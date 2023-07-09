@@ -8,35 +8,37 @@ import Home from "./ReactRouter/Home";
 import FramerMotion from "./FramerMotion/FramerMotion";
 import { motion } from "framer-motion";
 import "./assets/index.scss";
+import FormValidation from "./Formik/FormValidation";
 function App() {
   // const [visible, setVisible] = useState(true);
 
   return (
-    <motion.div className="App">
-      <FramerMotion />
-      <Home />
-      {/* <Nav />
-      <Home /> */}
+    <FormValidation />
+    // <motion.div className="App">
+    //   <FramerMotion />
+    //   <Home />
+    //   {/* <Nav />
+    //   <Home /> */}
 
-      {/* <FormControl/> */}
-      {/* <Nav /> */}
-      {/* <Posts /> */}
-      {/* {visible && <ComponentUnmount />}
-      <button
-        onClick={() => {
-          setVisible(false);
-        }}
-      >
-        hide counter
-      </button>
-      <button
-        onClick={() => {
-          setVisible(true);
-        }}
-      >
-        show counter
-      </button> */}
-    </motion.div>
+    //   {/* <FormControl/> */}
+    //   {/* <Nav /> */}
+    //   {/* <Posts /> */}
+    //   {/* {visible && <ComponentUnmount />}
+    //   <button
+    //     onClick={() => {
+    //       setVisible(false);
+    //     }}
+    //   >
+    //     hide counter
+    //   </button>
+    //   <button
+    //     onClick={() => {
+    //       setVisible(true);
+    //     }}
+    //   >
+    //     show counter
+    //   </button> */}
+    // </motion.div>
   );
 }
 
