@@ -9,14 +9,16 @@ import FramerMotion from "./FramerMotion/FramerMotion";
 import { motion } from "framer-motion";
 import "./assets/index.scss";
 import FormValidation from "./Formik/FormValidation";
+import Counter from "./Memoization/Counter";
 function App() {
   // const [visible, setVisible] = useState(true);
 
   return (
-    <FormValidation />
+    <Counter />
+    // <FormValidation />
     // <motion.div className="App">
     //   <FramerMotion />
-    //   <Home />
+    // //   <Home />
     //   {/* <Nav />
     //   <Home /> */}
 
@@ -38,7 +40,7 @@ function App() {
     //   >
     //     show counter
     //   </button> */}
-    // </motion.div>
+    //  </motion.div>
   );
 }
 
