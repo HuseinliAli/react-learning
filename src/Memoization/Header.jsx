@@ -1,8 +1,14 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ name }) => {
   console.log("header is rendered");
-  return <div>Header</div>;
+  return (
+    <div className="text-center">
+      Header - {JSON.stringify(name)}
+      <br />
+      <hr />
+    </div>
+  );
 };
 
 export default React.memo(Header);
