@@ -10,11 +10,12 @@ import { motion } from "framer-motion";
 import "./assets/index.scss";
 import FormValidation from "./Formik/FormValidation";
 import Counter from "./Memoization/Counter";
+import Application from "./ContextApi/Components/Application";
 function App() {
   // const [visible, setVisible] = useState(true);
 
   return (
-    <Counter />
+    <Application />
     // <FormValidation />
     // <motion.div className="App">
     //   <FramerMotion />
