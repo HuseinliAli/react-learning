@@ -4,7 +4,7 @@ const ChildComponent = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
     <div className={`bg-${theme} text-${theme === "light" ? "dark" : "light"}`}>
-      AKSLKDLSDLKASLKD{" "}
+      AKSLKDLSDLKASLKD
       <button
         className={`btn btn-${theme === "light" ? "dark" : "light"}`}
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
